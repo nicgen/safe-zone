@@ -69,6 +69,9 @@ pipeline {
         }
         failure {
             echo 'Pipeline failed!'
+            mail to: 'admin@mr-jenk.com',
+                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Something went wrong with ${env.BUILD_URL}"
         }
     }
 }

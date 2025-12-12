@@ -2,3 +2,5 @@ blueocean
 docker-workflow
 git
 workflow-aggregator
+email-ext
+mailer
