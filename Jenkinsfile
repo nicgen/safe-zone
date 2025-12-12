@@ -40,7 +40,7 @@ pipeline {
                 dir('frontend') {
                     sh 'npm install'
                     // Run tests using the local ng installed by npm
-                    sh 'npm run test -- --watch=false --browsers=ChromeHeadless'
+                    sh 'npm run test -- --watch=false --browsers=ChromeHeadlessNoSandbox'
                 }
             }
         }
