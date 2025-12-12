@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         COMPOSE_FILE = 'docker-compose.yml'
+        COMPOSE_PROJECT_NAME = 'mr-jenk'
     }
 
     stages {
