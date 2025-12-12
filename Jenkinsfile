@@ -66,12 +66,29 @@ pipeline {
         }
         success {
             echo 'Pipeline succeeded!'
+            mail to: 'admin@mr-jenk.com',
+                 subject: "✅ Build Succeeded: ${currentBuild.fullDisplayName}",
+                 body: """
+                 Great news! The build was successful.
+                 
+                 Project: ${env.JOB_NAME}
+                 Build Number: ${env.BUILD_NUMBER}
+                 URL: ${env.BUILD_URL}
+                 """
         }
         failure {
             echo 'Pipeline failed!'
             mail to: 'admin@mr-jenk.com',
-                 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-                 body: "Something went wrong with ${env.BUILD_URL}"
+                 subject: "❌ Build Failed: ${currentBuild.fullDisplayName}",
+                 body: """
+                 The build has failed. Please investigate.
+                 
+                 Project: ${env.JOB_NAME}
+                 Build Number: ${env.BUILD_NUMBER}
+                 URL: ${env.BUILD_URL}
+                 
+                 Check the console logs for errors.
+                 """
         }
     }
 }

@@ -12,6 +12,12 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - traefik_net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jenkins.rule=Host(`jenkins.local.hello-there.net`)"
+      - "traefik.http.routers.jenkins.entrypoints=websecure"
+      - "traefik.http.routers.jenkins.tls.certresolver=cloudflare"
+      - "traefik.http.services.jenkins.loadbalancer.server.port=8080"
     user: root # Needed to access /var/run/docker.sock if permission issues arise, otherwise might need group adjustment
 
 volumes:
