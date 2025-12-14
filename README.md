@@ -51,13 +51,19 @@ Detailed documentation has been generated for you:
 
 To start the Jenkins server:
 
-1.  **Start Jenkins**
+1.  **Configure Environment**
+    ```bash
+    cp .env.template .env
+    # Edit .env to set your email and domain
+    ```
+2.  **Start Jenkins**
     ```bash
     docker compose -f docker-compose.jenkins.yml up -d --build
     ```
-2.  **Access Jenkins**
-    -   Open via [http://localhost:8088](http://localhost:8088)
+3.  **Access Jenkins**
+    -   Open via [https://jenkins.local.hello-there.net](https://jenkins.local.hello-there.net)
     -   Retrieve the initial admin password:
         ```bash
         docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
         ```
+CHANGE
