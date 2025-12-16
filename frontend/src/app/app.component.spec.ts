@@ -14,7 +14,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-    // expect(app).toBeFalsy();
   });
 
   // Title property test removed as it's not strictly used in the template in this way
