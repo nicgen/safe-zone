@@ -2,6 +2,12 @@
 
 A Microservices-based E-commerce platform.
 
+## Prerequisites
+
+This project relies on a **Traefik Reverse Proxy** to handle routing and SSL.
+> **Important**: You must have the proxy running and configured before starting this project.
+> Refer to [Traefik Reverse Proxy](https://github.com/nicgen/Traefik-Reverse-Proxy) for setup instructions.
+
 ## Quick Start
 
 ### Option 1: Using Make (Recommended)
@@ -22,8 +28,8 @@ docker compose up -d --build
 ```
 
 ### Access
--   **Frontend**: [https://app.local.hello-there.net](https://app.local.hello-there.net)
--   **API**: [https://api.local.hello-there.net](https://api.local.hello-there.net)
+-   **Frontend**: [https://app.local.example.com](https://app.local.example.com)
+-   **API**: [https://api.local.example.com](https://api.local.example.com)
 
 ## Testing
 
@@ -47,6 +53,17 @@ Detailed documentation has been generated for you:
 -   Shopping Cart
 -   Seller Dashboard
 
+## Audit & Code Quality (SonarQube)
+
+To start the SonarQube server:
+
+```bash
+make sonarqube
+```
+
+-   **Access**: [https://sonarqube.local.example.com](https://sonarqube.local.example.com)
+-   **Setup Guide**: See [GUIDE.md](GUIDE.md) for detailed configuration steps.
+
 ## CI/CD (Jenkins)
 
 To start the Jenkins server:
@@ -58,12 +75,11 @@ To start the Jenkins server:
     ```
 2.  **Start Jenkins**
     ```bash
-    docker compose -f docker-compose.jenkins.yml up -d --build
+    make jenkins
     ```
 3.  **Access Jenkins**
-    -   Open via [https://jenkins.local.hello-there.net](https://jenkins.local.hello-there.net)
+    -   Open via [https://jenkins.local.example.com](https://jenkins.local.example.com)
     -   Retrieve the initial admin password:
         ```bash
         docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
         ```
-CHANGE
