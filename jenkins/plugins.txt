@@ -4,3 +4,4 @@ git
 workflow-aggregator
 email-ext
 mailer
+sonar

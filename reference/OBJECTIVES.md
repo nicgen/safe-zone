@@ -1,53 +1,54 @@
-## MR-Jenk
+## SafeZone
 
 ### Objectives
 
-Within this module, you will set up a Continuous Integration (CI) and Continuous Deployment (CD) pipeline using Jenkins. This pipeline will automatically build, test, and deploy your e-commerce microservices project.
+In this project, you will enhance the code quality and security of your e-commerce microservices project by setting up automated code quality checks using SonarQube. Additionally, you will integrate SonarQube with your GitHub repository to track code quality and ensure that bad practices are avoided.
 
 ### Instructions
 
-#### 1. Setting Up Jenkins
+#### 1. SonarQube Setup with Docker**
 
-- Download, install, and configure Jenkins.
-  - **Hint**: Use Jenkins official documentation or Docker to set up Jenkins.
-- Set up build agents if necessary.
+- Pull the SonarQube Docker image and run it on your local environment.
+- **Hint**: You can use the official SonarQube Docker image available on Docker Hub.
 
-#### 2. Create a CI/CD Pipeline for Your E-commerce Platform
+#### 2. SonarQube Configuration**
 
-- Create a Jenkins Job that fetches the source code from your Git repository (e.g., GitHub).
-- Set up build triggers to initiate a build whenever there's a new commit.
-  
-#### 3. Automated Testing
+- Access the SonarQube web interface running on your local environment.
+- Configure SonarQube to work with your e-commerce microservices project's codebase.
 
-- Integrate automated tests within your pipeline.
-  - **Hint**: Use JUnit for backend testing and Jasmine/Karma for Angular frontend testing.
-- Ensure that the pipeline fails when a test fails.
+#### 3. GitHub Integration**
 
-#### 4. Deployment
+- Integrate SonarQube with your GitHub repository.
+- Configure webhooks or GitHub Actions to trigger code analysis on every push to the repository.
 
-- Automatically deploy your application to a server or platform of your choice after successful builds. Consider platforms like AWS, Heroku, or a local server.
-- Implement a rollback strategy in case a deployment fails.
+#### 4. Code Analysis**
 
-#### 5. Notifications
+- Automate code analysis using SonarQube during the CI/CD pipeline.
+- Configure the pipeline to fail if code quality or security issues are detected by SonarQube.
 
-- Set up email or Slack notifications to inform team members of build status, whether it's a success or a failure.
+#### 5. Continuous Monitoring**
 
-### Bonus
+- Ensure that SonarQube runs regularly to provide continuous monitoring of code quality and security.
 
-- **Parameterized Builds**: Allow certain parameters to be customizable for each build run. For example, choose different deployment environments.
-- **Distributed Builds**: Use multiple build agents to carry out builds in parallel or to build for different platforms or environments.
+#### 6. Review and Approval Process**
+
+- Implement a code review and approval process to ensure that code quality improvements are reviewed and approved by team members.
+
+#### Bonus
+
+- Set up email or Slack notifications for code analysis results.
+- Integrate SonarQube with IDEs (Integrated Development Environments) to provide developers with real-time code quality feedback during development.
 
 ### Testing
 
-Your CI/CD setup will be assessed on:
+Your project will be assessed based on:
 
-- Successful and automated fetching of the latest code changes.
-- Effective implementation of automated tests and correct response to their outcomes.
-- Proper deployment strategies, ensuring new versions are smoothly transitioned into live environments.
-- The immediacy and accuracy of build and deployment notifications.
-- (Bonus) The correct and innovative use of parameterized and distributed builds.
+- Successful setup and configuration of SonarQube using Docker.
+- Integration of SonarQube with the GitHub repository and CI/CD pipeline.
+- Effective code analysis and detection of code quality and security issues.
+- Implementation of code review and approval processes.
 
 ### Resources
-[Jenkins Official Documentation](https://www.jenkins.io/doc/)
-[JUnit Documentation](https://junit.org/junit5/docs/current/user-guide/)
-[Jasmine/Karma Testing for Angular](https://angular.io/guide/testing)
+
+- [SonarQube Official Documentation](https://docs.sonarqube.org/latest/)
+- [GitHub Actions Documentation](https://docs.github.com/en/actions)

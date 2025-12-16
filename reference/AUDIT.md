@@ -1,57 +1,60 @@
-# AUDIT MR-Jenk
+## PART - Functional
 
-## PART - ACTION - Functional
+### ACTION - Access the SonarQube web interface running on your local environment.
 
-### ACTION - Download the project and trigger a Jenkins build. Observe if the pipeline runs as expected.
+#### Q? - Is the SonarQube web interface accessible, and has it been configured to work with your project's codebase?
 
-### Q? - Does the pipeline initiate and run successfully from start to finish?
+### ACTION - Integrate SonarQube with your GitHub repository.
 
-### ACTION - Trigger some intentional build errors and observe Jenkins' response.
+#### Q? - Is SonarQube integrated with GitHub, and does it trigger code analysis on every push to the repository?
 
-### Q? - Does Jenkins respond appropriately to build errors?
+### ACTION - Set up and configure SonarQube for code analysis using Docker.
 
-### ACTION - Examine the automated testing step.
+#### Q? - Is SonarQube configured correctly, and does it analyze code during the CI/CD pipeline?
 
-### Q? - Are tests run automatically during the pipeline execution? Does the pipeline halt on test failure?
+### ACTION - Automate code analysis using SonarQube during the CI/CD pipeline.
 
-### ACTION - Make a minor change in the source code, commit, and push. Observe if the pipeline is triggered automatically.
+#### Q? - Does the CI/CD pipeline correctly analyze code, and does it fail when code quality or security issues are detected?
 
-### Q? - Does a new commit and push automatically trigger the Jenkins pipeline?
 
-### ACTION - Check the deployment process.
+### ACTION - Implement a code review and approval process.
 
-### Q? - Is the application deployed automatically after a successful build? Is there a rollback strategy in place?
+#### Q? - Is there a code review and approval process in place to ensure code quality improvements are reviewed and approved?
 
-## PART - ACTION - Security
+## PART - Comprehension
 
-### ACTION - Examine the permissions on the Jenkins dashboard.
+### ACTION - SonarQube Setup and Integration
 
-### Q? - Are permissions set appropriately to prevent unauthorized access or changes?
+#### Q? - Can the student explain the steps required to set up SonarQube within the project environment?
 
-### ACTION - Review how sensitive data (like API keys, passwords) is managed in Jenkins.
+#### Q? - Can the student describe the process of integrating SonarQube with the project's CI/CD pipeline and GitHub repository?
 
-### Q? - Is sensitive data secured using Jenkins secrets or environment variables?
+### ACTION - SonarQube Functionality
 
-## PART - ACTION - Code Quality and Standards
+#### Q? - Can the student explain how SonarQube functions within the project, including its role in code analysis and how it contributes to code quality improvement?
 
-### ACTION - Examine the Jenkinsfile or the build configuration.
+## PART - Security
 
-### Q? - Is the code/script well-organized and understandable? Are there any best practices being ignored?
+### ACTION - Review the permissions and access controls in SonarQube.
 
-### ACTION - Look into the test report formats and outputs.
+#### Q? - Are permissions set appropriately to prevent unauthorized access to code analysis results?
 
-### Q? - Are test reports clear, comprehensive, and stored for future reference?
+## PART - Code Quality and Standards
 
-### ACTION - Check for notifications setup.
+### ACTION - Examine the SonarQube rules and code analysis reports.
 
-### Q? - Are notifications triggered on build and deployment events? Are they informative?
+#### Q? - Are SonarQube rules configured correctly, and are code quality and security issues accurately identified?
 
-## PART - ACTION - Bonus
+### ACTION - Review any code quality improvements made based on SonarQube feedback.
 
-### ACTION - Examine if parameterized builds are implemented.
+#### Q? - Are code quality issues addressed and committed to the GitHub repository?
 
-### Q? - +Are there options for customizing the build run with different parameters?
+## PART - Bonus
 
-### ACTION - Examine the distributed builds (if implemented).
+### ACTION - Set up email or Slack notifications for code analysis results.
 
-### Q? - +Are multiple agents utilized effectively for distributed builds?
+#### Q? - Are notifications in place for code analysis results?
+
+### ACTION - Integrate SonarQube with IDEs (Integrated Development Environments).
+
+#### Q? - Are IDE integrations in place to provide developers with real-time code quality feedback during development?
