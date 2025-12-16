@@ -17,3 +17,12 @@ clean:
 # View logs
 logs:
 	docker compose logs -f
+
+# Start Jenkins
+jenkins:
+	#docker compose -f docker-compose.jenkins.yml up -d
+        docker compose -f docker-compose.jenkins.yml up -d --build
+
+# Start SonarQube
+sonarqube:
+	docker compose -f docker-compose.sonarqube.yml up -d
