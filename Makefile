@@ -20,8 +20,8 @@ logs:
 
 # Start Jenkins
 jenkins:
-	#docker compose -f docker-compose.jenkins.yml up -d
-        docker compose -f docker-compose.jenkins.yml up -d --build
+#docker compose -f docker-compose.jenkins.yml up -d    
+	docker compose -f docker-compose.jenkins.yml up -d --build
 
 # Start SonarQube
 sonarqube:
