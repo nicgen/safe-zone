@@ -13,8 +13,8 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    // expect(app).toBeTruthy(); // This will pass
-    expect(app).toBeFalsy(); // This will fail
+    expect(app).toBeTruthy(); // This will pass
+    // expect(app).toBeFalsy(); // This will fail
 
   });
 
