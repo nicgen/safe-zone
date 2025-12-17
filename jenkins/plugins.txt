@@ -5,3 +5,4 @@ workflow-aggregator
 email-ext
 mailer
 sonar
+github
