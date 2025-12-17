@@ -6,3 +6,4 @@ email-ext
 mailer
 sonar
 github
+ws-cleanup
