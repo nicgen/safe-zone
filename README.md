@@ -2,7 +2,6 @@
 
 A Microservices-based E-commerce platform.
 
-**change**
 
 ## Prerequisites
 
